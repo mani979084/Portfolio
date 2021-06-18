@@ -21,25 +21,26 @@ const Contact = () => {
         setdata({ ...getdata, [name]: value })
     }
 
-    console.log(getdata)
 
-    async function handleSubmit() {
+    function handleSubmit() {
 
         setspin(true)
-        const config = {
-            headers: {
-                'Content-Type': 'application/json'
+        async function fetch() {
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             }
+            const body = JSON.stringify(getdata)
+            const res = await axios.post('/api/contact', body, config);
+            setmsg(res.data)
+            setTimeout(() => {
+                setspin(false)
+                setOpen(true);
+                setdata({ name: '', email: '', message: '' })
+            }, 1000)
         }
-        const body = JSON.stringify(getdata)
-        const res = await axios.post('api/contact', body, config);
-        setmsg(res.data)
-        setTimeout(() => {
-            setspin(false)
-            setOpen(true);
-            setdata({ name: '', email: '', message: '' })
-        }, 1000)
-
+        fetch()
     }
 
     const handleClose = (event, reason) => {
