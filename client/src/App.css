@@ -10,10 +10,11 @@
 
 /*===== Colores =====*/
 :root{
-  --first-color: #4070F4;
+  --first-color: #40c7f5;
   --second-color: #0E2431;
+  --second-color1: white;
 }
-
+/* linear-gradient(to bottom, #40c7f5 0%, #3a6eef 100%) */
 /*===== Fuente y tipografia =====*/
 :root{
   --body-font: 'Poppins', sans-serif;
@@ -55,10 +56,16 @@ html{
   scroll-behavior: smooth;
 }
 body{
+  background-image: url('https://www.bytestechnolab.com/wp-content/uploads/2020/01/benifit-laravel-backgrnd.png');
+  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
+  /* background-size: contain; */
+
+  /* background-position-y: 65px; */
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  color: var(--second-color1);
 }
 h1,h2,p{
   margin: 0;
@@ -122,8 +129,10 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146,161,176,.15);
+  
+  
+  background-color: #040a23;
+  box-shadow: 0 1px 4px rgba(255,255,255,.15);
 }
 
 /*===== NAV =====*/
@@ -146,7 +155,8 @@ img{
     transition: .5s;
   }
   .work__section{
-    padding:80px 50px !important ;
+    padding:50px 50px !important ;
+    height: 530px;
   }
   .work__size{
     padding: 0 25px !important;
@@ -178,10 +188,13 @@ img{
   background-color: var(--first-color);
 }
 .nav__logo{
-  color: var(--second-color);
+  color: var(--second-color1);
+}
+.nav__logo:hover{
+  color: var(--first-color);
 }
 .nav__toggle{
-  color: var(--second-color);
+  color: var(--second-color1);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -228,7 +241,7 @@ img{
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
-  color: var(--second-color);
+  color: var(--second-color1);
 }
 .home__social-icon:hover{
   color: var(--first-color);
@@ -250,7 +263,8 @@ img{
   border-radius: .5rem;
 }
 .button:hover{
-  box-shadow: 0 10px 36px rgba(0,0,0,.15);
+  color: white;
+  box-shadow: 0 10px 36px rgba(1, 161, 253, 0.15);
 }
 
 /* ===== ABOUT =====*/
@@ -327,7 +341,7 @@ img{
   padding: .5rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: .5rem;
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  box-shadow: 0 4px 15px rgba(0, 178, 248, 0.15);
 }
 .skills__icon{
   font-size: 2rem;
@@ -370,7 +384,7 @@ img{
   width: 85%;
 }
 .skills__js{
-  width: 65%;
+  width: 85%;
 }
 .skills__mongo{
   width: 90%;
@@ -432,7 +446,7 @@ img{
   row-gap: 2rem;
 }
 .work__im{
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  /* box-shadow: 0 4px 20px rgba(0, 183, 255, 0.15); */
   border-radius: .5rem;
   overflow: hidden;
 }
@@ -447,11 +461,16 @@ img{
 /* ===== CONTACT =====*/
 
 
-.contact__btn span:first-child{
-  margin-right: 8px;
+.contact_spin{
+  margin-left: 8px;
 }
+.contact_arrow{
+  transition: transform 200ms;
+
+}
+
 .contact__btn{
-  background-color: #4070F4;
+  background-color: var(--first-color);
   width: 100px;
   padding: 10px;
   display: flex;
@@ -459,15 +478,20 @@ img{
   border-radius: 8px;
   cursor: pointer;
 }
+.contact__btn:hover .contact_arrow{
+  transform: translateX(.35rem);
+}
 
 .contact_input{
   width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
+  font-size: 1rem;
+
   padding: 0.8rem;
   border-radius: .5rem;
-  border: 1.5px solid var(--second-color);
+  color: var(--second-color1);
+  border: 1.5px solid var(--second-color1);
   outline: none;
+  background: transparent;
   margin-bottom: var(--mb-4);
 }
 .contact__button{
@@ -481,11 +505,13 @@ img{
 
 /* ===== FOOTER =====*/
 .footer{
-  background-color: var(--second-color);
+  background-color: #040a23;
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  box-shadow: 0 -1px 4px rgba(255,255,255,.15);
+
 }
 .footer__title{
   font-size: 2rem;
@@ -498,6 +524,9 @@ img{
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2)
+}
+.footer__icon:hover{
+  color: var(--first-color);
 }
 
 /* ===== MEDIA QUERIES=====*/
@@ -536,10 +565,10 @@ img{
     display: none;
   }
   .nav__link{
-    color: var(--second-color);
+    color: var(--second-color1);
   }
   .nav__link:hover{
-    color:#4070F4;
+    color:var(--first-color);
   }
 
   .home{
@@ -560,7 +589,7 @@ img{
   }
   .home__img{
     width: 457px;
-    bottom: 15%;
+    bottom: 30%;
   }
 
   .about__container, .skills__container{

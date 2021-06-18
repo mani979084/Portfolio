@@ -29,7 +29,7 @@ const Slider = () => {
 
                                             </p>
                                             <div className='work__a mt-2 d-flex align-items-center'>
-                                                <a href="#!" className='text-white' >Demo</a>
+                                                <a href="https://yelpcamp-react-9790.herokuapp.com/" className='text-white' >Demo</a>
                                                 <i class='bx bx-chevrons-right ms-2 text-white'></i>
                                             </div>
 
@@ -55,7 +55,7 @@ const Slider = () => {
                                                 DevConnector is a social network-based application where users can connect and post articles based on software development trends.
                                             </p>
                                             <div className='work__a mt-2 d-flex align-items-center'>
-                                                <a href="#!" className='text-white' >Demo</a>
+                                                <a href="https://dev-connector-9790.herokuapp.com/" className='text-white' >Demo</a>
                                                 <i class='bx bx-chevrons-right ms-2 text-white'></i>
                                             </div>
 
@@ -82,7 +82,7 @@ const Slider = () => {
 
                                             </p>
                                             <div className='work__a mt-2 d-flex align-items-center'>
-                                                <a href="#!" className='text-white' >Demo</a>
+                                                <a href="https://bank-search-application-9790.herokuapp.com/" className='text-white' >Demo</a>
                                                 <i class='bx bx-chevrons-right ms-2 text-white'></i>
                                             </div>
 
@@ -98,7 +98,7 @@ const Slider = () => {
                                 <div className='row gx-5'>
                                     <div className="col-md-6 work__size">
                                         <div className="work__im">
-                                            <img src="/img/trip.jpg" />
+                                            <img src="/img/tt.jpg" />
                                         </div>
                                     </div>
                                     <div className="col-md-6 mt-md-0 mt-4 d-flex align-items-center">
@@ -109,7 +109,7 @@ const Slider = () => {
 
                                             </p>
                                             <div className='work__a mt-2 d-flex align-items-center'>
-                                                <a href="#!" className='text-white' >Demo</a>
+                                                <a href="http://trip-9790.herokuapp.com/" className='text-white' >Demo</a>
                                                 <i class='bx bx-chevrons-right ms-2 text-white'></i>
                                             </div>
 

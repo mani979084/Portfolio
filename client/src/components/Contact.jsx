@@ -3,6 +3,7 @@ import axios from 'axios'
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -64,11 +65,14 @@ const Contact = () => {
 
                 <div className="contact__container bd-grid">
                     <form className="contact__form">
-                        <input type="text" name="name" value={getdata.name} onChange={handleChange} placeholder="Name" className="contact_input" />
-                        <input type="mail" name="email" value={getdata.email} onChange={handleChange} placeholder="Email" className="contact_input" />
-                        <textarea placeholder='Message' onChange={handleChange} name="message" value={getdata.message} id="" cols="0" rows="6" className="contact_input"></textarea>
-                        <div className='contact__btn' onClick={handleSubmit}>
-                            <span>Submit</span><span>{spin && <CircularProgress thickness={5.6} color='inherit' size={15} />}</span>
+                        <input type="text" name="name" autocomplete="off" value={getdata.name} onChange={handleChange} placeholder="Name" className="contact_input c_i" />
+                        <input type="mail" name="email" autocomplete="off" value={getdata.email} onChange={handleChange} placeholder="Email" className="contact_input c_i" />
+                        <textarea placeholder='Message' onChange={handleChange} name="message" value={getdata.message} id="" cols="0" rows="6" className="contact_input c_i"></textarea>
+                        <div className='contact__btn c_i' onClick={handleSubmit}>
+                            <span>Submit</span>{spin && <span className='contact_spin'><CircularProgress thickness={7} color='inherit' size={12} /></span>}
+                            {!spin && <span className='contact_arrow'><ChevronRightIcon fontSize='small' /></span>}
+
+
                         </div>
 
                     </form>
