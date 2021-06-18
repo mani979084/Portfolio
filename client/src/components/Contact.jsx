@@ -32,7 +32,7 @@ const Contact = () => {
             }
         }
         const body = JSON.stringify(getdata)
-        const res = await axios.post('http://localhost:5000/api/contact', body, config);
+        const res = await axios.post('api/contact', body, config);
         setmsg(res.data)
         setTimeout(() => {
             setspin(false)
