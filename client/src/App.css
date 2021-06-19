@@ -57,6 +57,7 @@ html{
 }
 body{
   background-image: url('https://www.bytestechnolab.com/wp-content/uploads/2020/01/benifit-laravel-backgrnd.png');
+  background-color: #040a23;
   /* background-repeat: no-repeat; */
   background-attachment: fixed;
   /* background-size: contain; */
