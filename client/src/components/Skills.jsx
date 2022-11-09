@@ -89,7 +89,7 @@ const Skills = () => {
                         <div className="skills__data">
                             <div className="skills__names">
                                 <i class='bx bx-data skills__icon' ></i>
-                                <span className="skills__name">MONGO DB</span>
+                                <span className="skills__name">MYSQL</span>
                             </div>
                             <div className="skills__bar skills__mongo">
 

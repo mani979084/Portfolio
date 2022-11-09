@@ -157,7 +157,7 @@ img{
   }
   .work__section{
     padding:50px 50px !important ;
-    height: 530px;
+    height: 630px !important;
   }
   .work__size{
     padding: 0 25px !important;
@@ -439,6 +439,7 @@ img{
 
 .work__section{
   padding: 80px 100px;
+  height: 500px
 }
 .car__sel{
   margin-top: 100px;
@@ -490,7 +491,7 @@ img{
   padding: 0.8rem;
   border-radius: .5rem;
   color: var(--second-color1);
-  border: 1.5px solid var(--second-color1);
+  /* border: 1.5px solid var(--second-color1); */
   outline: none;
   background: transparent;
   margin-bottom: var(--mb-4);
