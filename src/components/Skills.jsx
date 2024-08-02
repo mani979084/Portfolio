@@ -8,7 +8,7 @@ const Skills = () => {
 
         <div className="skills__container bd-grid">
           <div>
-            <h2 className="skills__subtitle">Frontend developer</h2>
+            <h2 className="skills__subtitle">Frontend</h2>
 
             <div className="skills__data">
               <div className="skills__names">
@@ -52,7 +52,7 @@ const Skills = () => {
             </div>
           </div>
           <div>
-            <h2 className="skills__subtitle">Backend developer</h2>
+            <h2 className="skills__subtitle">Backend</h2>
 
             <div className="skills__data">
               <div className="skills__names">
